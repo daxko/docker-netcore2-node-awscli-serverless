@@ -16,3 +16,5 @@ RUN apt-get update \
     && ln -s /usr/local/bin/node /usr/local/bin/nodejs \
     && node -v \
     && npm install serverless -g
+
+WORKDIR builder
