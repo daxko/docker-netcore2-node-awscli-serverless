@@ -12,6 +12,6 @@ before_deploy:
 - docker tag "$IMAGE_NAME" "${IMAGE_NAME}:${TRAVIS_BUILD_NUMBER}"
 deploy:
   provider: script
-  script: docker push "${IMAGE_NAME}:latest" && docker push "${IMAGE_NAME}:${version}"
+  script: docker push "${IMAGE_NAME}:latest" && docker push "${IMAGE_NAME}:${TRAVIS_BUILD_NUMBER}"
   on:
     branch: master
