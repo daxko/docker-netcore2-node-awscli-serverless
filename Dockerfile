@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.0.0-sdk
+FROM microsoft/dotnet:2.0.6-sdk-2.1.104
 
 RUN apt-get update \
     && apt-get upgrade -y \
