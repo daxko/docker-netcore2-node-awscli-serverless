@@ -4,7 +4,7 @@ RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y --no-install-recommends \
     build-essential g++ python2.7 python2.7-dev unzip curl \
-    python-pip python-setuptools gnupg2 groff \
+    python-pip python-setuptools gnupg2 groff zip \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir -p /tmp \
     && cd /tmp \
@@ -15,4 +15,4 @@ RUN apt-get update \
     && rm -rf /usr/lib/systemd/* \
     && ln -s /usr/local/bin/node /usr/local/bin/nodejs \
     && node -v \
-    && npm install serverless -g
+    && npm install serverless jest -g
