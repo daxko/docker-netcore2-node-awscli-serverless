@@ -15,5 +15,5 @@ RUN apt-get update \
     && rm -rf /usr/lib/systemd/* \
     && ln -s /usr/local/bin/node /usr/local/bin/nodejs \
     && node -v \
-    && npm install serverless jest -g
+    && npm install serverless jest -g \
     && chmod -R a+wx /usr/share/dotnet/sdk/
