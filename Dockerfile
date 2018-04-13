@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.1-sdk
+FROM microsoft/dotnet:2.0.6-sdk-2.1.104
 
 RUN apt-get update \
     && apt-get upgrade -y \
@@ -16,3 +16,4 @@ RUN apt-get update \
     && ln -s /usr/local/bin/node /usr/local/bin/nodejs \
     && node -v \
     && npm install serverless jest -g
+    && chmod -R a+wx /usr/share/dotnet/sdk/
