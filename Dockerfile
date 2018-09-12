@@ -16,8 +16,8 @@ RUN apt-get update \
     && ln -s /usr/local/bin/node /usr/local/bin/nodejs \
     && node -v \
     && npm install serverless jest -g \
-    && chmod -R a+wx /usr/share/dotnet/sdk/
+    && chmod -R a+wx /usr/share/dotnet/sdk/ \
 # update version of npm that has `npm ci` command
 # latest version available at the time
-RUN npm install npm@6.4.1 -g
+    && npm install npm@6.4.1 -g
  
