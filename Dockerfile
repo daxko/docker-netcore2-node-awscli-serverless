@@ -5,6 +5,8 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     build-essential g++ python2.7 python2.7-dev unzip curl \
     python-pip python-setuptools gnupg2 groff zip jq nuget \
+    && curl -L https://storage.googleapis.com/kubernetes-release/release/v1.14.1/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl \
+    && chmod +x /usr/local/bin/kubectl \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir -p /tmp \
     && cd /tmp \
